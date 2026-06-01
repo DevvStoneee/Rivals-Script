@@ -61,7 +61,7 @@ Status.TextSize = 14
 
 -- Instructions
 local Instructions = Instance.new("TextLabel", Main)
-Instructions.Text = "1. Press JOIN GROUP\n2. Opens or copies link\n3. If it doesn't open, paste in Chrome\n4. Join the group"
+Instructions.Text = "1. Press JOIN GROUP\n2. After pressing it, the link will be copied\n3. Paste the copied link in any browser\n4. Join the group"
 Instructions.Size = UDim2.new(1,-30,0,80)
 Instructions.Position = UDim2.new(0,15,0,80)
 Instructions.BackgroundTransparency = 1
@@ -112,12 +112,12 @@ local function checkGroup()
 
 	if inGroup then
 		hasAccess = true
-		Status.Text = "Access Granted âœ…"
+		Status.Text = "Access Granted"
 		Status.TextColor3 = Color3.fromRGB(0,255,170)
 		JoinBtn.Visible = false
 	else
 		hasAccess = false
-		Status.Text = "Join the group to continue â�Œ"
+		Status.Text = "Join the group to get access to the script "
 		Status.TextColor3 = Color3.fromRGB(255,120,120)
 		JoinBtn.Visible = true
 	end
@@ -147,15 +147,15 @@ JoinBtn.MouseButton1Click:Connect(function()
 	end
 
 	if opened then
-		Status.Text = "Opened in browser ðŸŒ� (if not, paste in Chrome)"
+		Status.Text = "Opened in browser (if not, paste in Chrome)"
 		Status.TextColor3 = Color3.fromRGB(0,255,170)
 	else
 		if typeof(setclipboard) == "function" then
 			setclipboard(GROUP_LINK)
-			Status.Text = "Link copied! Paste it in Chrome ðŸŒ�"
+			Status.Text = "Link copied! Paste it in any browser"
 			Status.TextColor3 = Color3.fromRGB(0,200,255)
 		else
-			Status.Text = "Copy link and open in Chrome âš ï¸�"
+			Status.Text = "Copy link and open in any browser"
 		end
 	end
 
